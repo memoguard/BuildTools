@@ -1,0 +1,10 @@
+*.~pas
+*.~dfm
+*.~ddp
+*.ddp
+*.dcu
+*.res
+*.dsk
+*.~dsk
+*.~dpr
+*.log
