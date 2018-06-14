@@ -34,6 +34,8 @@ ECHO mab included OK
 
 REM CD "%D7InstPath%"
 
+SET PATH=%OLDPATH%
+
 GOTO END
 :EXIT_ERROR
 ECHO Compile FolderName ProjectName
