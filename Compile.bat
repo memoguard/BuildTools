@@ -20,9 +20,10 @@ ECHO Deleting DCUs from source folder ...
 DEL *.DCU
 ECHO DCUs deleted
 
-REM ECHO Building resources ...
-REM "BRCC32.exe" -32 "%2.rc" >nul:
-REM ECHO Resource built
+ECHO Building resources ...
+"BRCC32.exe" -32 "%2_version.rc" >nul:
+"BRCC32.exe" -32 "%2_icon.rc" >nul:
+ECHO Resource built
 
 ECHO Building program ... with Force ReBuild option
 "DCC32.exe" -B "%2.dpr" > "C:\Temp\BuildLog\BuildLog_%2.txt"
@@ -33,6 +34,7 @@ ECHO Including mab file
 ECHO mab included OK
 
 REM CD "%D7InstPath%"
+cd C:\Temp\BuildTools
 
 SET PATH=%OLDPATH%
 
